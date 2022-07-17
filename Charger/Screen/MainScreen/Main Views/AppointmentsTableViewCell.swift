@@ -20,7 +20,6 @@ class AppointmentsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func set(model: AppointmentModel) {

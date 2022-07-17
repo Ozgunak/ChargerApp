@@ -12,9 +12,6 @@ protocol CityDisplayLogic {
 }
 
 class CreateCitiesViewController: UIViewController, CityDisplayLogic{
- // TODO: - Custom search bar view
-    // TODO: - Custom cell view
-    // TODO: - data
        
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!

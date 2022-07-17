@@ -12,7 +12,6 @@ class CitiesTableViewCell: UITableViewCell {
     @IBOutlet weak var cityLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     func setup(_ name: String) {

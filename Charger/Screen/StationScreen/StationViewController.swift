@@ -27,7 +27,6 @@ class StationViewController: UIViewController {
         navigationItem.backButtonDisplayMode = .minimal
         if filterArray.isEmpty {
             collectionView.isHidden = true
-            // hide filters
         } else {
                 collectionView.isHidden = false
         }
@@ -49,7 +48,6 @@ class StationViewController: UIViewController {
     }
     var filters: FilterModel? {
         didSet {
-            // send filtered request
             filterArray.removeAll()
             if filters?.AC ?? false {
                 filterArray.append("AC")

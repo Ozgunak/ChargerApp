@@ -15,8 +15,6 @@ protocol CityLogic {
 
 class CreateCitiesInteractor: CityLogic {
     
-//    weak var viewController: CityDisplayLogic?
-
     func getCities(completion: @escaping ([String]) -> Void) {
         let userID = User.userModel.userID ?? 0
         let userToken = User.userModel.token ?? ""

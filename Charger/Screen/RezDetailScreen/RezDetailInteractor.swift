@@ -28,7 +28,6 @@ class RezDetailInteractor: RezLogic {
         print(param)
         guard let url = URL(string: "http://ec2-18-197-100-203.eu-central-1.compute.amazonaws.com:8080/appointments/make?userID=\(userID)") else { return }
         
-//        &userLatitude=\(lat)&userLongitude=\(lon)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -50,7 +49,7 @@ class RezDetailInteractor: RezLogic {
             guard let httpUrlResponse = response as? HTTPURLResponse, (200...299).contains(httpUrlResponse.statusCode) else { return }
             if let safeData = data {
                 do {
-                    let appointmentModel = try JSONDecoder().decode(RezModel.self, from: safeData)
+                    _ = try JSONDecoder().decode(RezModel.self, from: safeData)
                     completion(true)
                 }
                 catch let error {

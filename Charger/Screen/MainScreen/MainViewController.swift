@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class MainViewController: UIViewController {
 
     @IBOutlet weak var createAppoinmentButton: UIButton!
@@ -20,16 +19,9 @@ class MainViewController: UIViewController {
     var router: Routable?
     let headers = ["Güncel Randevular", "Geçmiş Randevular"]
 
-    var appointments: [AppointmentModel] = [] {
-        didSet{
-//            self.reload()
-        }
-    }
-    var outdatedAppointments: [AppointmentModel] = [] {
-        didSet{
-//            self.reload()
-        }
-    }
+    var appointments: [AppointmentModel] = []
+    
+    var outdatedAppointments: [AppointmentModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,11 +83,11 @@ class MainViewController: UIViewController {
             }
         }
         
-        for item in outdatedAppointments {
-            appointments.removeAll { appModel in
-                appModel == item
-            }
-        }
+//        for item in outdatedAppointments {
+//            appointments.removeAll { appModel in
+//                appModel == item
+//            }
+//        }
 
         reload()
     }
