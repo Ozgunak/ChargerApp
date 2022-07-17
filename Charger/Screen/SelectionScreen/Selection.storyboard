@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selection View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SelectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SelectionViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Randevu Tarihi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5d-r7-jlK">
+                                <rect key="frame" x="20" y="76" width="159" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXE-d0-AJh">
+                                <rect key="frame" x="48" y="762" width="318" height="50"/>
+                                <color key="backgroundColor" name="WhiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w80-G2-T4s"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="DEVAM ET"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="continuePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VAx-ox-gZg"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="30w-th-jsn">
+                                <rect key="frame" x="20" y="135" width="374" height="619"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="FZC-Rb-4jh">
+                                        <rect key="frame" x="0.0" y="0.0" width="124" height="619"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soket 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whO-yb-Qz7" userLabel="Soket 1">
+                                                <rect key="frame" x="34.5" y="0.0" width="55.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqJ-NB-p3H">
+                                                <rect key="frame" x="45.5" y="32.5" width="33" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" name="grayScalegray25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f4y-JS-obt">
+                                                <rect key="frame" x="8" y="60.5" width="108" height="558.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="Scj-Ur-lOW"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="67F-D7-rtg"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="f4y-JS-obt" firstAttribute="leading" secondItem="FZC-Rb-4jh" secondAttribute="leading" constant="8" id="Zvx-Wg-RDj"/>
+                                            <constraint firstAttribute="trailing" secondItem="f4y-JS-obt" secondAttribute="trailing" constant="8" id="yc5-4k-VfN"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SAI-6S-ve0">
+                                        <rect key="frame" x="125" y="0.0" width="124" height="619"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soket 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQF-nQ-HX8" userLabel="Soket 2">
+                                                <rect key="frame" x="33" y="0.0" width="58" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHq-on-WPR">
+                                                <rect key="frame" x="45.5" y="32.5" width="33" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" name="grayScalegray25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RqF-Pi-90X">
+                                                <rect key="frame" x="8" y="60.5" width="108" height="558.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="Oi2-jc-FM6"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="fvt-lE-neR"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RqF-Pi-90X" firstAttribute="leading" secondItem="SAI-6S-ve0" secondAttribute="leading" constant="8" id="9j9-Io-2ER"/>
+                                            <constraint firstAttribute="trailing" secondItem="RqF-Pi-90X" secondAttribute="trailing" constant="8" id="JdN-tT-0xb"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="QgJ-gV-egS">
+                                        <rect key="frame" x="250" y="0.0" width="124" height="619"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Soket 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4Y-1s-TUX">
+                                                <rect key="frame" x="33" y="0.0" width="58" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg1-LK-3GQ">
+                                                <rect key="frame" x="45.5" y="32.5" width="33" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" name="grayScalegray25"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rxv-OY-8h3">
+                                                <rect key="frame" x="8" y="60.5" width="108" height="558.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="PbN-0f-f8m"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="KDl-Uu-FLV"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Rxv-OY-8h3" firstAttribute="leading" secondItem="QgJ-gV-egS" secondAttribute="leading" constant="8" id="J4b-ME-6HP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rxv-OY-8h3" secondAttribute="trailing" constant="8" id="iHO-2t-2gv"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O9A-JV-MIL">
+                                <rect key="frame" x="389" y="76" width="5" height="22"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundPrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="30w-th-jsn" firstAttribute="top" secondItem="t5d-r7-jlK" secondAttribute="bottom" constant="30" id="7mJ-vC-Rzs"/>
+                            <constraint firstItem="t5d-r7-jlK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="F0b-W9-J6r"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="O9A-JV-MIL" secondAttribute="trailing" constant="20" id="GmB-PX-57A"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WXE-d0-AJh" secondAttribute="bottom" constant="50" id="Ins-BH-fNK"/>
+                            <constraint firstItem="30w-th-jsn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Ums-lg-2mU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="30w-th-jsn" secondAttribute="trailing" constant="20" id="aBF-rn-1uJ"/>
+                            <constraint firstItem="O9A-JV-MIL" firstAttribute="top" secondItem="t5d-r7-jlK" secondAttribute="top" id="cy1-p7-JQD"/>
+                            <constraint firstItem="WXE-d0-AJh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="48" id="g47-AF-73a"/>
+                            <constraint firstItem="WXE-d0-AJh" firstAttribute="top" secondItem="30w-th-jsn" secondAttribute="bottom" constant="8" symbolic="YES" id="lS4-hC-DSH"/>
+                            <constraint firstItem="t5d-r7-jlK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="32" id="mxI-KD-4rI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WXE-d0-AJh" secondAttribute="trailing" constant="48" id="thD-bb-B6u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="WXE-d0-AJh" id="SdY-Jm-0nr"/>
+                        <outlet property="dateTextField" destination="O9A-JV-MIL" id="9LI-kR-kGZ"/>
+                        <outlet property="socketOneTableView" destination="f4y-JS-obt" id="wiF-wm-4iv"/>
+                        <outlet property="socketThreeTableView" destination="Rxv-OY-8h3" id="f7x-6U-fTL"/>
+                        <outlet property="socketTwoTableView" destination="RqF-Pi-90X" id="YiL-Bj-GcK"/>
+                        <outlet property="soket1PowerLabel" destination="XqJ-NB-p3H" id="yVC-yH-SHd"/>
+                        <outlet property="soket1StackView" destination="FZC-Rb-4jh" id="EcJ-Mg-Er9"/>
+                        <outlet property="soket2PowerLabel" destination="kHq-on-WPR" id="JMQ-sv-Jaf"/>
+                        <outlet property="soket2StackView" destination="SAI-6S-ve0" id="6M3-3x-rz1"/>
+                        <outlet property="soket3PowerLabel" destination="pg1-LK-3GQ" id="GXk-TH-CZ8"/>
+                        <outlet property="soket3StackView" destination="QgJ-gV-egS" id="yke-UO-mye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundPrimaryColor">
+            <color red="0.22800000011920929" green="0.24199999868869781" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="grayScalegray25">
+            <color red="0.71764705882352942" green="0.74117647058823533" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

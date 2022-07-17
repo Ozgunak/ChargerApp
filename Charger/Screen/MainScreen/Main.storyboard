@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MainViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="haZ-OS-jsY">
+                                <rect key="frame" x="159" y="72" width="96" height="94"/>
+                                <color key="tintColor" name="SecTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="JJ1-HJ-2g7"/>
+                                    <constraint firstAttribute="width" constant="96" id="hWp-iT-q3N"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Henüz bir randevu oluşturmadunız." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vc-VH-BSp">
+                                <rect key="frame" x="20" y="234" width="374" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oluşturulan randevular burada listelenir." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aH6-K7-dvQ">
+                                <rect key="frame" x="20" y="333.5" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" name="SecTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-Oq-tju">
+                                <rect key="frame" x="48" y="762" width="318" height="50"/>
+                                <color key="backgroundColor" name="WhiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ash-bh-bhg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="RANDEVU OLUŞTUR">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAppoinmentButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4dx-xL-tzw"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cDx-p4-e41">
+                                <rect key="frame" x="20" y="56" width="374" height="698"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="yeo-ot-ovc"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="zSo-8m-Gk8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundPrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="aH6-K7-dvQ" firstAttribute="top" secondItem="8vc-VH-BSp" secondAttribute="bottom" constant="42" id="2Nc-MR-tLR"/>
+                            <constraint firstItem="cDx-p4-e41" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="A4q-g5-DEZ"/>
+                            <constraint firstItem="8vc-VH-BSp" firstAttribute="top" secondItem="haZ-OS-jsY" secondAttribute="bottom" constant="67" id="B3d-m7-AEt"/>
+                            <constraint firstItem="aH6-K7-dvQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Gbm-21-lyh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aH6-K7-dvQ" secondAttribute="trailing" constant="20" id="Hmx-JW-wQm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8qf-Oq-tju" secondAttribute="trailing" constant="48" id="IQd-Td-hFN"/>
+                            <constraint firstItem="haZ-OS-jsY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="27" id="PWe-lf-cev"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8vc-VH-BSp" secondAttribute="trailing" constant="20" id="UwB-nl-2Yi"/>
+                            <constraint firstItem="cDx-p4-e41" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="VpW-ZU-CKh"/>
+                            <constraint firstItem="8vc-VH-BSp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="cPl-Gc-AcY"/>
+                            <constraint firstItem="8qf-Oq-tju" firstAttribute="top" secondItem="cDx-p4-e41" secondAttribute="bottom" constant="8" symbolic="YES" id="dCa-17-WxD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8qf-Oq-tju" secondAttribute="bottom" constant="50" id="e3U-jI-OFn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cDx-p4-e41" secondAttribute="trailing" constant="20" id="jJH-U8-NTW"/>
+                            <constraint firstItem="haZ-OS-jsY" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="pe8-d8-u2c"/>
+                            <constraint firstItem="8qf-Oq-tju" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="48" id="v2q-HW-if5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="xum-pp-Eql"/>
+                    <connections>
+                        <outlet property="createAppoinmentButton" destination="8qf-Oq-tju" id="AFc-B2-cdA"/>
+                        <outlet property="leafImage" destination="haZ-OS-jsY" id="IrE-pj-eCd"/>
+                        <outlet property="noApp2Label" destination="aH6-K7-dvQ" id="jWj-Lx-NoU"/>
+                        <outlet property="noAppLabel" destination="8vc-VH-BSp" id="EGR-wq-chK"/>
+                        <outlet property="tableView" destination="cDx-p4-e41" id="g1I-bJ-nUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2862.3188405797105" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="leaf" catalog="system" width="128" height="109"/>
+        <namedColor name="BackgroundPrimaryColor">
+            <color red="0.22800000011920929" green="0.24199999868869781" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="SecTextColor">
+            <color red="0.75" green="0.76800000667572021" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

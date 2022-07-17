@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "01_EV_Splash_01.png",
       "idiom" : "universal"
     }
   ],

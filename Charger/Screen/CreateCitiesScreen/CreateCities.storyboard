@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Cities View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CreateCitiesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CreateCitiesViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Şehir Ara" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-fG-mFO">
+                                <rect key="frame" x="20" y="56" width="374" height="51"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="WhiteColor"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search" textContentType="address-level2"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="8Tg-U4-3eG"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UYN-Jh-QXz">
+                                <rect key="frame" x="12" y="115" width="390" height="747"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="WhiteColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="2AO-vQ-GrE"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="Gsv-Xm-zMS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundPrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="UYN-Jh-QXz" firstAttribute="top" secondItem="ah2-fG-mFO" secondAttribute="bottom" constant="8" id="60K-gC-vpR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ah2-fG-mFO" secondAttribute="trailing" constant="20" id="AdH-Qg-5vf"/>
+                            <constraint firstItem="ah2-fG-mFO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="NDC-g5-c2e"/>
+                            <constraint firstItem="ah2-fG-mFO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="12" id="XWi-Wn-EBo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="UYN-Jh-QXz" secondAttribute="trailing" constant="12" id="iHZ-mR-URW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="UYN-Jh-QXz" secondAttribute="bottom" id="qGR-RS-3eJ"/>
+                            <constraint firstItem="UYN-Jh-QXz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="12" id="wc1-yx-3iO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="947-zL-ShA"/>
+                    <connections>
+                        <outlet property="searchBar" destination="ah2-fG-mFO" id="aJ8-f3-j8C"/>
+                        <outlet property="tableView" destination="UYN-Jh-QXz" id="dBa-7f-tA2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995.65217391304361" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundPrimaryColor">
+            <color red="0.22800000011920929" green="0.24199999868869781" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="WhiteColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

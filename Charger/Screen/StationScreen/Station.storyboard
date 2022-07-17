@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Station View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="StationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="StationViewController" customModule="Charger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Dpo-V0-TDN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="wCb-2F-KcC"/>
+                                </constraints>
+                                <color key="tintColor" name="solidwhite"/>
+                                <color key="barTintColor" name="Charcoal grey"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kSZ-IZ-5ma">
+                                <rect key="frame" x="8" y="162" width="398" height="700"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="efQ-tF-QUe"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="VN3-To-lvp"/>
+                                </connections>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Hr-ns-Fpg">
+                                <rect key="frame" x="0.0" y="100" width="414" height="42"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="FIo-1B-4cI"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UuF-B5-ou7">
+                                    <size key="itemSize" width="141" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="faL-V3-37q"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="8pD-fS-s1c"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="BackgroundPrimaryColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kSZ-IZ-5ma" secondAttribute="trailing" constant="8" id="9NI-zO-hPt"/>
+                            <constraint firstItem="8Hr-ns-Fpg" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Bnc-kU-eEA"/>
+                            <constraint firstItem="Dpo-V0-TDN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Cth-t8-6Zl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8Hr-ns-Fpg" secondAttribute="trailing" id="J4u-ix-FVf"/>
+                            <constraint firstItem="kSZ-IZ-5ma" firstAttribute="top" secondItem="8Hr-ns-Fpg" secondAttribute="bottom" constant="20" id="MO5-a8-pwF"/>
+                            <constraint firstItem="Dpo-V0-TDN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="MRu-bb-xq2"/>
+                            <constraint firstItem="8Hr-ns-Fpg" firstAttribute="top" secondItem="Dpo-V0-TDN" secondAttribute="bottom" constant="12" id="eya-c5-LVe"/>
+                            <constraint firstItem="Dpo-V0-TDN" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hEF-JL-RZj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kSZ-IZ-5ma" secondAttribute="bottom" id="jAW-0P-ciS"/>
+                            <constraint firstItem="kSZ-IZ-5ma" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="zVh-sk-mWk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="8Hr-ns-Fpg" id="1Z8-NF-Oiy"/>
+                        <outlet property="tableView" destination="kSZ-IZ-5ma" id="r97-PF-z5Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.507246376811594" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundPrimaryColor">
+            <color red="0.22800000011920929" green="0.24199999868869781" blue="0.28200000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Charcoal grey">
+            <color red="0.2627450980392157" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="solidwhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

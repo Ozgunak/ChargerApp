@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitiesTableViewCell" rowHeight="44" id="KGk-i7-Jjw" customClass="CitiesTableViewCell" customModule="Charger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X82-Aw-Rxx">
+                        <rect key="frame" x="8" y="12" width="304" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRL-HL-jtl">
+                        <rect key="frame" x="8" y="36.5" width="292" height="1"/>
+                        <color key="backgroundColor" name="SecTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="TDQ-Zg-MV1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="X82-Aw-Rxx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="9IY-2b-hea"/>
+                    <constraint firstItem="QRL-HL-jtl" firstAttribute="top" secondItem="X82-Aw-Rxx" secondAttribute="bottom" constant="4" id="Id1-3o-oxf"/>
+                    <constraint firstItem="X82-Aw-Rxx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="U8q-ut-zvu"/>
+                    <constraint firstItem="QRL-HL-jtl" firstAttribute="leading" secondItem="X82-Aw-Rxx" secondAttribute="leading" id="Yz5-Ii-XCv"/>
+                    <constraint firstAttribute="trailing" secondItem="X82-Aw-Rxx" secondAttribute="trailing" constant="8" id="ckh-ce-VqF"/>
+                    <constraint firstAttribute="trailing" secondItem="QRL-HL-jtl" secondAttribute="trailing" constant="20" id="jW1-iU-7AP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="cityLabel" destination="X82-Aw-Rxx" id="Bz2-tw-nrC"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="SecTextColor">
+            <color red="0.75" green="0.76800000667572021" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
